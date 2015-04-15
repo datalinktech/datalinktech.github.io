@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Datalink Technologies - Contact Us</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom Google Web Font -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Add custom CSS here -->
+  <link href="css/landing-page.css" rel="stylesheet">
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+  <style>
+    .map {
+      height: 500px;
+    }
+    #map-canvas {
+      width:  100%;
+      height: 100%;
+      height: calc(100% - 0px);
+    }
+  </style>
+
+  <script>
+  var map;
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(-37.92655, 145.22886);
+
+    var mapOptions = {
+      zoom: 18,
+      center: myLatlng
+    };
+
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title:"Datalink Technologies"
+    });
+
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    marker.setMap(map);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container" style="font-weight: bold;">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Datalink Technologies</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="case_studies.html">Case Studies</a></li>
+          <li><a href="contact_us.html">Contact Us</a></li>
+          <li><a href="https://dfms.datalinktech.com.au" target="_blank">Login</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+
+  <div class="container">
+
+    <div class="row map">
+      <div id="map-canvas"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-sm-4">
+
+        <h2 class="section-heading">Contact Us</h2>
+
+        <address>
+          <strong>Datalink Technologies</strong><br>
+
+          8/899 Wellington Road<br>
+          Rowville, Victoria<br>
+          Australia, 3178<br>
+          <br/>
+          <abbr title="Phone">Phone:</abbr> +61 3 9024 9400<br>
+          <abbr title="Fax">Fax:</abbr> +61 3 9755 6111<br>
+          <abbr title="Email">Enquiries:</abbr> sales@datalinktech.com.au<br>
+        </address>
+
+      </div>
+
+      <div class="col-lg-8 col-sm-8">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p class="copyright text-muted small">Copyright &copy; Datalink Technologies Pty Ltd 1995-2015. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
